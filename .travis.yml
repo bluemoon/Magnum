@@ -4,5 +4,5 @@ python:
   - 2.7
 script: make ci
 install:
-  - pip install nose
+  -	pip install -r requirements.pip --use-mirrors
   - pip install . --use-mirrors
