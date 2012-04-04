@@ -21,7 +21,6 @@ setup(
     description='Python ORM for Humans.',
     author='Bradford Toney',
     author_email='bradford.toney@gmail.com',
-    packages=find_packages(),
-    package_data={'': ['LICENSE', 'NOTICE']},
+    packages=packages=['magnum'],
     include_package_data=True,
 )
