@@ -2,6 +2,7 @@ SHELL := /bin/bash
 
 init:
 	python setup.py develop
+	pip install -r requirements.pip --use-mirrors
 test:
 	nosetests ./tests/*
 ci: init
