@@ -1,2 +1,2 @@
-from .field import Field, StringField
-from .model import Model
+from magnum.field import Field, StringField
+from magnum.model import Model
