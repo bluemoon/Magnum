@@ -1,16 +1,13 @@
 SHELL := /bin/bash
 
 init:
-        python setup.py develop
-
+	python setup.py develop
 test:
-        nosetests ./tests/*
-
+	nosetests ./tests/*
 ci: init
-        nosetests tests/test_magnum.py --with-xunit --xunit-file=junit-report.xml
-
+	nosetests tests/test_magnum.py --with-xunit --xunit-file=junit-report.xml
 simpleci:
-        nosetests tests/test_magnum.py --with-xunit --xunit-file=junit-report.xml
+	nosetests tests/test_magnum.py --with-xunit --xunit-file=junit-report.xml
 site:
-        cd docs; make dirhtml
+	cd docs; make dirhtml
 docs: site
