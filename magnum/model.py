@@ -1,9 +1,10 @@
+from .field import Field
 
 class ModelMetaclass(type):
     def __new__(cls, name, bases, attrs):
         metaclass = attrs.get('__metaclass__')
         super_new = super(ModelMetaclass, cls).__new__
-        if metaclass and issubclass(metaclass, DocumentMetaclass):
+        if metaclass and issubclass(metaclass, ModelMetaclass):
             return super_new(cls, name, bases, attrs)
             
         doc_fields = {}
